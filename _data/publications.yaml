@@ -1,3 +1,6 @@
+- authors: "G. Aad et al."
+  title: "Precision calibration of calorimeter signals in the ATLAS experiment using an uncertainty-aware neural network"
+  arxiv: "2412.04370"
 - authors: "T. Heimel, T. Plehn, N. Schmal"
   title: "Profile Likelihoods on ML-Steroids"
   arxiv: "2411.00942"
