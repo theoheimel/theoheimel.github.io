@@ -1,0 +1,47 @@
+subtitle: Postdoctoral researcher in particle physics and machine learning
+links:
+  - text: Email
+    url: mailto:theo.heimel@uclouvain.be
+  - text: InspireHEP
+    url: https://inspirehep.net/authors/2838330
+  - text: Github
+    url: https://github.com/theoheimel
+aboutme: |-
+  I am a postdoctoral researcher in particle physics and machine learning at the
+  [Centre for Cosmology, Particle Physics and Phenomenology](
+  https://uclouvain.be/en/research-institutes/irmp/cp3) in Louvain-la-Neuve.
+  The main focus of my research is accelerating event
+  generation for the High-Luminosity LHC and beyond using generative networks. In particular, the
+  [MadNIS](https://madnis.ai) project aims to make sampling hard-scattering events in
+  [MadGraph](https://launchpad.net/mg5amcnlo) faster using neural importance sampling.
+  Furthermore, I am interested in ML-based methods to extract more information from LHC data.
+  This includes unfolding with generative networks, simulation-based inference, and combining
+  machine-learned detector effects with theory knowledge in the matrix element method.
+career:
+  - position: Postdoc
+    start: 2024
+    where: |-
+      Centre for Cosmology, Particle Physics and Phenomenology
+      UCLouvain
+  - position: PhD in Physics
+    start: 2021
+    end: 2024
+    advisor: Tilman Plehn
+    where: Heidelberg University
+  - position: MSc in Physics
+    start: 2018
+    end: 2021
+    advisor: Tilman Plehn
+    where: Heidelberg University
+  - position: BSc in Physics
+    start: 2015
+    end: 2018
+    advisor: Tilman Plehn
+    where: Heidelberg University
+contact: |-
+  theo.heimel@uclouvain.be
+
+  UCLouvain, CP3\
+  Chemin du Cyclotron, 2 bte L07.01.05\
+  1348 Louvain-la-Neuve\
+  Belgium

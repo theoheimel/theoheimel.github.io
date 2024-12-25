@@ -1,0 +1,140 @@
+:root {
+    --dark-gray: #333333;
+    --light-gray: #666666;
+    --link-color: #209cee;
+}
+
+html {
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.wrapper {
+    padding: 2rem;
+    max-width: 1280px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: var(--dark-gray);
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: var(--light-gray);
+    font-size: 0.875rem;
+    font-weight: 300;
+    margin: 0;
+    padding-bottom: 1.5rem;
+}
+
+h3 {
+    color: var(--dark-gray);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+    padding-bottom: 0.25rem;
+}
+
+p {
+    color: var(--light-gray);
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+header p {
+    color: var(--light-gray);
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h3 a {
+    color: var(--dark-gray);
+}
+
+.link-list a {
+    text-transform: uppercase;
+    color: var(--light-gray);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.link-list a:hover {
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0 0;
+}
+
+.link-list li {
+    display: inline;
+    padding-right: 1rem;
+}
+
+section, header {
+    display: block;
+}
+
+header {
+    margin-bottom: 1.5rem;
+}
+
+section {
+    padding-top: 3rem;
+}
+
+.sec-heading {
+    max-width: 150px;
+    width: 100%;
+}
+
+.sec-content {
+    flex: none;
+}
+
+.sec-content div {
+    margin-bottom: 1.5rem;
+}
+
+.sec-content > p {
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .wrapper {
+        padding: 6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .sec-content {
+        padding-left: 5rem;
+        flex: 1 1 0%;
+    }
+
+    section, header {
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start;
+    }
+}

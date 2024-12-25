@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Theo Heimel</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ "/assets/images/apple-touch-icon.png" | relative_url }}"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ "/assets/images/favicon-32x32.png" | relative_url }}"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ "/assets/images/favicon-16x16.png" | relative_url }}"
+    >
+    <link rel="manifest" href="{{ "/site.webmanifest" | relative_url }}">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;600;700&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.data.info.subtitle }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="sec-heading">
+          <img
+            src="{{ "/assets/images/theo_heimel.jpg" | relative_url }}"
+            alt="Theo Heimel"
+          >
+        </div>
+        <div class="sec-content">
+          <h1>Theo Heimel</h1>
+          <p>{{ site.data.info.subtitle }}</p>
+          <ul class="link-list">
+            {% for link in site.data.info.links %}
+              <li><a href="{{ link.url }}">{{ link.text }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </header>
+      <section>
+        <div class="sec-heading">
+          <h2>About me</h2>
+        </div>
+        <div class="sec-content">
+          {{ site.data.info.aboutme | markdownify }}
+        </div>
+      </section>
+      <section>
+        <div class="sec-heading">
+          <h2>Career</h2>
+        </div>
+        <div class="sec-content">
+          {% for item in site.data.info.career %}
+            <div>
+              <h3>{{ item.position }}, {{ item.start }} &ndash; {{ item.end }}</h3>
+              <p>
+                {% if item.advisor %}
+                  Advisor: {{ item.advisor }}<br>
+                {% endif %}
+                {{ item.where | newline_to_br }}
+              </p>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+      <section>
+        <div class="sec-heading">
+          <h2>Publications</h2>
+        </div>
+        <div class="sec-content">
+          {% for paper in site.data.publications %}
+            <div>
+              <h3><a href="https://arxiv.org/abs/{{paper.arxiv}}">{{ paper.title }}</a></h3>
+              <p>
+                {{ paper.authors }}<br>
+                <a href="https://arxiv.org/abs/{{paper.arxiv}}">
+                    arXiv:{{paper.arxiv}}</a>{% if paper.journal %}, {{ paper.journal }}{% endif %}
+              </p>
+            </div>
+          {% endfor %}
+        </div>
+      </section>
+      <section>
+        <div class="sec-heading">
+          <h2>Contact</h2>
+        </div>
+        <div class="sec-content">
+            {{ site.data.info.contact | markdownify }}
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
