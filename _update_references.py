@@ -21,12 +21,13 @@ with open("_data/publications.yaml", "w") as f:
                 f"{journal_info['journal_title']} {journal_info['journal_volume']}, "
                 f"{journal_info['artid']} ({journal_info['year']})"
             )
+            if "dois" in pub_meta:
+                doi = pub_meta["dois"][0]["value"]
+            else:
+                doi = None
         else:
             journal = None
-        for info in pub_meta.get("publication_info", []):
-            if "pubinfo_freetext" in info:
-                journal = info["pubinfo_freetext"]
-                break
+            doi = None
         n_authors = len(pub_meta["authors"])
         authors = ", ".join(
             f"{author['first_name'][:1]}. {author['last_name']}"
@@ -35,12 +36,11 @@ with open("_data/publications.yaml", "w") as f:
         if n_authors > max_authors:
             authors += " et al."
         f.write("\n".join([
-                f'- authors: "{authors}"',
-                f'  title: "{title}"',
-                f'  arxiv: "{arxiv_id}"'
-            ] + (
-                [f'  journal: "{journal}"'] if journal is not None else []
-            )
-        ))
+            f'- authors: "{authors}"',
+            f'  title: "{title}"',
+            f'  arxiv: "{arxiv_id}"',
+            *([f'  journal: "{journal}"'] if journal is not None else []),
+            *([f'  doi: "{doi}"'] if doi is not None else []),
+        ]))
         f.write('\n')
 

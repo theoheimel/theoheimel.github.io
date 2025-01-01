@@ -95,7 +95,13 @@
               <p>
                 {{ paper.authors }}<br>
                 <a href="https://arxiv.org/abs/{{paper.arxiv}}">
-                    arXiv:{{paper.arxiv}}</a>{% if paper.journal %}, {{ paper.journal }}{% endif %}
+                arXiv:{{paper.arxiv}}</a>{% if paper.journal %},
+                    {%if paper.doi %}
+                        <a href="https://doi.org/{{ paper.doi }}">{{ paper.journal }}</a>
+                    {% else %}
+                        {{ paper.journal }}
+                    {% endif %}
+                {% endif %}
               </p>
             </div>
           {% endfor %}
