@@ -1,3 +1,6 @@
+- authors: "A. Butter, T. Heimel, N. Huetsch, M. Kagan, T. Plehn"
+  title: "Simulation-Prior Independent Neural Unfolding Procedure"
+  arxiv: "2507.15084"
 - authors: "G. Aad et al."
   title: "Precision calibration of calorimeter signals in the ATLAS experiment using an uncertainty-aware neural network"
   arxiv: "2412.04370"
